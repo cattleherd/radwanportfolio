@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*cusotm css of menu--------------------------*/
+@layer components {
+    
+    #menu{
+
+        animation:mymove 1s ease-out forwards;
+        animation-iteration-count:1;
+        
+        /* Safari and Chrome */
+        -webkit-animation:mymove 1s;
+        -webkit-animation-iteration-count:1;
+        }
+        
+
+
+  @keyframes mymove
+        { from {top:-100px; opacity: 0;}
+        to {top:0px; opacity: 1}
+        }
+        
+        @-webkit-keyframes mymove /* Safari and Chrome */
+        {
+        from {top:0px; opacity: 0;}
+        to {top:200px; opacity: 1;}
+        }
+/*cusotm css of menu--------------------------*/
+  
+.animation-delay-2000 {
+    animation-delay: 2s;
+    z-index: -1000;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+    z-index: -1000;
+  }
+
+
+  #modal{
+
+    animation:modalmove 1s ease-out forwards;
+    animation-iteration-count:1;
+    
+    /* Safari and Chrome */
+    -webkit-animation:modalmove 1s;
+    -webkit-animation-iteration-count:1;
+    }
+
+    
+  @keyframes modalmove
+  { from {top:-100px; opacity: 0;}
+  to {top:0px; opacity: 1}
+  }
+  
+  @-webkit-keyframes modalmove /* Safari and Chrome */
+  {
+  from {top:0px; opacity: 0;}
+  to {top:200px; opacity: 1;}
+  }
+}

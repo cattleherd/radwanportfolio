@@ -11,92 +11,116 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Document</title>
 </head>
-<body class="font-nunito">
-<!--------------------------------------top half------------------------------------------>
-<div class="h-96 bg-gradient-to-t from-indigo-200 to-slate-50 relative overflow-hidden">
+<body id="top" class="font-nunito"> <!--body must have full screen, important when using relative height eg(height 50%, 1/2), with interior elements-->
+  <div id="modal" class="modal z-50 fixed fade top-0 left-[calc(50%-150px)] lg:left-[calc(50%-125px)] w-80 md:w-1/4   hidden   outline-none"
+  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+      <div class="modal-body relative p-4 text-center text-lg">
+        Email has been sent
+      </div>
+      <div class="flex justify-end p-4 rounded-b-md">
+        <button id="closemodal" type="button" class="px-6
+          py-2.5
+          bg-purple-600
+          text-white
+          font-medium
+          text-xs
+          leading-tight
+          uppercase
+          rounded
+          shadow-md
+          hover:bg-purple-700 hover:shadow-lg
+          focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0
+          active:bg-purple-800 active:shadow-lg
+          transition
+          duration-150
+          ease-in-out" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+</div>
   <!-----------------------------nav------------------------------------------------------>
-  <nav class="z-10 w-full bg-white fixed top-0 flex items-center justify-between p-3">
-        <div class="flex items-center gap-3 mr-5">
-          <img class="h-8 rounded-full" src="../public/img/face.png" alt="">
-          <span class="text-indigo-500 font-bold">Portfolio</span>
-        </div>
-        <div id="mainmenu" class="hidden w-full sm:flex sm:justify-end md:flex md:justify-center ">
-          <ul class=" text-indigo-500 align-middle w-9/12 justify-between flex lg:justify-around lg:w-7/12" >
-            <li>About Me</li>
-            <li>Works</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <div class="space-y-2 z-30 sm:hidden" id="hamburger">
-          <div class="w-6 h-0.5 bg-indigo-500" id="hamburgeritem"></div>
-          <div class="w-6 h-0.5 bg-indigo-500" id="hamburgeritem"></div>
-          <div class="w-6 h-0.5 bg-indigo-500" id="hamburgeritem"></div>
-        </div>
-        <div class="hidden absolute left-0 top-0 w-full rounded-b-3xl bg-indigo-300 text-center p-10 border-r-5" id="menu">
-          <ul class="flex flex-col gap-5 text-white">
-            <li>
-              <a id="menu-link" href="#about">about me</a>
-            </li>
-            <li>
-              <a id="menu-link" href="#services">services</a>
-            </li>
-            <li>
-              <a id="menu-link" href="#works">works</a>
-            </li>
-            <li>
-              <a id="menu-link" href="#contact">contact</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
-      <div class=" circle rounded-full bg-gradient-to-t from-blue-500 to-cyan-200 block absolute top-40 left-1/4 h-72 w-72 "></div>
-      <img class=" h-64 w-64 object-cover absolute left-1/4  top-32" src="./img/man.png" alt="">
+  <nav id="nav" class="z-10 w-screen bg-white fixed top-0 flex  justify-between p-3 px-10">
+      <a class="flex gap-3 mr-5" href="#top">
+        <img class="h-8 rounded-full" src="../public/img/face.png" alt="">
+        <span class="text-indigo-500  animate-pulse">Portfolio</span>
+      </a>
+    <div id="mainmenu" class="hidden w-full sm:flex sm:justify-end md:flex md:justify-center ">
+      <ul class=" text-indigo-500 align-middle w-9/12 justify-between flex lg:justify-around lg:w-7/12" >
+        <li class="duration-200 hover:text-white lg:text-xl hover:font-semibold hover:cursor-pointer hover:scale-110 hover:bg-indigo-200 rounded-xl py-1 px-3"><a href="#about-me">About Me</a></li>
+        <li class="duration-200 hover:text-white lg:text-xl hover:font-semibold hover:cursor-pointer hover:scale-110 hover:bg-indigo-200 rounded-xl py-1 px-3"><a href="#works">Works</a></li>
+        <li class="duration-200 hover:text-white lg:text-xl hover:font-semibold hover:cursor-pointer hover:scale-110 hover:bg-indigo-200 rounded-xl py-1 px-3"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="space-y-2 z-30 sm:hidden" id="hamburger">
+      <div class="w-6 h-0.5 bg-indigo-500" id="hamburgeritem"></div>
+      <div class="w-6 h-0.5 bg-indigo-500" id="hamburgeritem"></div>
+      <div class="w-6 h-0.5 bg-indigo-500" id="hamburgeritem"></div>
+    </div>
+    <div id="menu"  class="hidden absolute left-0 top-0 w-full rounded-b-3xl bg-indigo-300 text-center p-10 border-r-5" >
+      <ul class="flex flex-col gap-5 text-white">
+        <li>
+          <a id="menu-link" href="#about-me">about me</a>
+        </li>
+        <li>
+          <a id="menu-link" href="#works">works</a>
+        </li>
+        <li>
+          <a id="menu-link" href="#contact">contact</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+  <!--------------------------------------top half------------------------------------------>
+<div class=" px-10 h-[60vh] w-screen bg-gradient-to-t from-indigo-200 to-slate-50 relative overflow-hidden lg:h-screen">
+      <div class=" circle rounded-full bg-gradient-to-t from-blue-500 to-cyan-200 block absolute top-64 md:top-52 left-1/4 h-96 w-96 md:w-[450px] md:h-[450px] lg:left-1/4 lg:h-[900px] lg:w-[900px] lg:top-96"></div>
+      <img class=" h-80 w-80 object-cover absolute left-1/4 top-52 md:top-36 md:w-96 md:h-96 lg:h-[500px] lg:w-[500px] lg:top-60 lg:left-1/3" src="./img/man.png" alt="">
     <!----------------------------animatedtext----------------------------------------->
-    <div class="animatedtext absolute top-24 px-2 left-0 sm:left-24">
-      <span class="text-indigo-600 text-3xl font-bold pl-10  ">Freelance</span>
-      <p id="animatedtext" class="text-xl text-cyan-500 font-bold pl-10 pt-2"></p>
+    <div class="animatedtext absolute top-52 px-2 left-0 ">
+      <span class="text-indigo-600 text-4xl font-bold pl-10 md:text-5xl lg:text-9xl lg:pl-0  ">Freelance</span>
+      <p id="animatedtext" class="text-2xl text-cyan-500 md:text-3xl font-bold pl-10 pt-2 lg:text-7xl lg:pl-0"></p>
     </div>
     <!----------------------------short summary---------------------------------------->
-    <div class="bg-white w-64 h-32 absolute top-1/4 left-2/3 rounded-xl px-2 py-2 hidden lg:block">
-      <h1 class="text-lg text-indigo-500 font-bold ">Hello I'm John.</h1>
-      <p class="text-gray-500 text-sm">With over ___ years experience in web design and development. 
+    <div class="bg-white w-[400px] h-[275px] absolute top-[700px] rounded-xl px-6  py-8 hidden lg:block">
+      <h1 class="text-3xl text-indigo-500 font-bold ">Hello I'm John.</h1>
+      <p class="text-gray-500 text-lg mt-5">With over ___ years experience in web design and development. Please take a look at my recent works! 
       </p>
-      <a class="bg-indigo-500 text-xs p-1 w-14 my-2 rounded-md block text-white">Hire Me</a>
+      <a class="bg-indigo-500 text-md hover:bg-indigo-400 hover:font-bold hover:scale-110 duration-200 hover:cursor-pointer   w-32 h-10 my-6 rounded-xl text-white block py-2 text-center" href="#contact">Hire Me</a>
     </div>
-  </div>
+</div>
   <!---------------------------end of top half---------------------------------------------->
   <div id="about-me" class="">
-    <div class="container flex flex-col-reverse items-center px-8 py-12 ">
-      <div id="left" class=" rounded-full overflow-hidden my-10">
-        <img src="./img/face.jpg" class="h-80" alt="">
+    <div class="flex flex-col-reverse pt-12 lg:flex-row justify-end "> <!--m-auto to center align items in flex col-->
+      <div id="left" class="flex max-h-[500px] max-w-[500px] px-10 mx-auto my-10 lg:pr-10">
+        <img src="./img/face.jpg" class="rounded-full" alt="">
       </div>
-      <div id="right" class="py-12">
-        <h1 class="text-indigo-500 font-bold py-2">ABOUT ME</h1>
+      <div id="right" class="py-10 lg:w-1/2 lg:pl-10 px-10">
+        <h1 class="text-indigo-500 text-xl font-bold lg:text-4xl py-2">ABOUT ME</h1>
         <h1 class="text-gray-500 font-light text-3xl pb-1">Modern Designs</h1>
         <h1 class="text-gray-500 font-light text-3xl">Seemless U/X</h1>
-        <p class="text-gray-500 pt-3">I have 2 years experience in web development freelance work, and have built
+        <p class="text-gray-500 pt-3 text-xl lg:text-2xl">I have 2 years experience in web development freelance work, and have built
           full stack web applications using React, and ExpressJs. I can also create modern, and responsive websites quickly with tailwind CSS, and I have experience in designing
           graphics from scratch using figma.
         </p>
         <h1 class="text-indigo-500 font-light pt-8 text-xl">CSS</h1>
         <div class="w-full bg-gray-200 h-1.5 rounded-md mt-3">
-          <div class="w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
+          <div class=" overflow-hidden w-3/4 bg-indigo-500 h-1.5 rounded-md mt-3"></div>
         </div>
         <h1 class="text-indigo-500 font-light pt-3 text-xl">Javascript</h1>
-        <div class="w-10/12 bg-gray-200 h-1.5 rounded-md mt-3">
-          <div class="w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
+        <div class="w-full bg-gray-200 h-1.5 rounded-md mt-3">
+          <div class="w-10/12  bg-indigo-500 h-1.5 rounded-md mt-3"></div>
         </div>
         <h1 class="text-indigo-500 font-light pt-3 text-xl">NodeJs</h1>
-        <div class="w-5/6 bg-gray-200 h-1.5 rounded-md mt-3">
-          <div class="w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
+        <div class="w-full bg-gray-200 h-1.5 rounded-md mt-3">
+          <div class="w-5/6  bg-indigo-500 h-1.5 rounded-md mt-3"></div>
         </div>
         <h1 class="text-indigo-500 font-light pt-3 text-xl">ExpressJs</h1>
-        <div class="w-11/12 bg-gray-200 h-1.5 rounded-md mt-3">
-          <div class="w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
+        <div class="w-full bg-gray-200 h-1.5 rounded-md mt-3">
+          <div class="w-11/12   bg-indigo-500 h-1.5 rounded-md mt-3"></div>
         </div>
         <h1 class="text-indigo-500 font-light pt-3 text-xl">ReactJs</h1>
-        <div class="w-10/12 bg-gray-200 h-1.5 rounded-md mt-3">
-          <div class="w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
+        <div class=" w-full bg-gray-200 h-1.5 rounded-md mt-3">
+          <div class="w-10/12 bg-indigo-500 h-1.5 rounded-md mt-3"></div>
         </div>
         <h1 class="text-indigo-500 font-light pt-3 text-xl">Figma</h1>
         <div class="w-full bg-gray-200 h-1.5 rounded-md mt-3">
@@ -104,63 +128,76 @@
         </div>
         <h1 class="text-indigo-500 font-light pt-3 text-xl">Wordpress</h1>
         <div class="w-full bg-gray-200 h-1.5 rounded-md mt-3">
-          <div class="w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
+          <div class=" w-full bg-indigo-500 h-1.5 rounded-md mt-3"></div>
         </div>
       </div>
     </div>
   </div>
-  <div id="services">
-    <div class="container flex flex-col items-center px-4 py-2">
-      <div id="top">
-        <h1 class="text-indigo-500 text-2xl font-medium text-center">Services</h1>
-        <h1 class="text-gray-500 font-light text-3xl pb-1 text-center">What I Can Offer</h1>
-        <p class="text-gray-500 pt-3">I can create websites and web applications for a wide scale of needs; from a simple
-          landing page, to a scaleable e-commerce website, or a social media web application. I'm experienced with the Wordpress CMS
+  <div id="works">
+    <div class="container flex flex-col py-20  m-auto px-4">
+      <div id="top" class="lg:w-9/12 px-10 mx-auto lg:pb-20">
+        <h1 class="text-indigo-500 text-2xl font-medium text-center lg:text-5xl lg:pb-10">Services</h1>
+        <h1 class="text-gray-500 font-light text-3xl text-center pb-6">What I Can Offer</h1>
+        <p class="text-gray-500 pt-3 lg:text-xl">I can create websites and web applications for a wide scale of needs; from a simple
+          landing page, to a scaleable e-commerce website. I'm experienced with the Wordpress CMS
           in creating websites quickly that are secure, responsive, and SEO friendly. I also have experience creating custom vector graphics using figma.
         </p>
       </div>
-      <div id="bottom" class="pt-12"></div>
-        <h1 class="text-indigo-500 text-2xl font-medium text-center">Portfolio</h1>
-        <h1 class="text-gray-500 font-light text-3xl pb-1 text-center">Works & Projects</h1>
-        <div id="gallery" class="px-10 py-10">
-          <a class="w-full" href="https://react-pokedex-2.herokuapp.com/">
-            <h1 class="text-gray-500 text-xl text-center mb-5">ReactJs Pokedex</h1>
-            <img class="rounded-md h-60 shadow-2xl transition-all hover:scale-110" src="./img/pokemon.PNG" alt="">
-          </a>
-          <a class="w-full" href="https://rad-social.herokuapp.com/">
-            <h1 class="text-gray-500 text-xl text-center mb-5  my-14">ReactJs Social Media</h1>
-            <h1 class="text-gray-500 text-md text-center mb-5">(Desktop Only)</h1>
-            <img class="rounded-md h-60 shadow-2xl transition-all hover:scale-110" src="./img/radsocial.PNG" alt="">
-          </a>
-          <a class="w-full" href="https://immense-island-92357.herokuapp.com/">
-            <h1 class="text-gray-500 text-xl text-center mb-5  my-14">Full-Stack Campground App</h1>
-            <img class="rounded-md h-60 shadow-2xl transition-all hover:scale-110" src="./img/radcamp.PNG" alt="">
-          </a>
+      <div id="" class="pt-12"></div>
+        <h1 class="text-indigo-500 text-2xl font-medium text-center lg:text-5xl pb-6">Portfolio</h1>
+        <h1 class="text-gray-500 font-light text-3xl pb-1 text-center mb-12">Works & Projects</h1>
+        <div id="gallery" class=" w-full lg:flex lg:flex-row lg:flex-wrap lg:justify-around px-4">
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+            <a href="https://react-pokedex-2.herokuapp.com/">
+              <h1 class="text-gray-500 text-2xl text-center mb-12">ReactJs Pokedex</h1>
+              <img class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110" src="./img/pokemon.PNG" alt="">
+            </a>
+          </div>
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-3/4 blur-md right-0 rounded-full h-60 w-60 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-4000"></div>
+            <div class=" bg-cyan-200 absolute top-20 right-3/4 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-2000"></div> 
+            <a  href="https://rad-social.herokuapp.com/">
+              <h1 class="text-gray-500 text-2xl text-center mb-12">ReactJs Social Media (Desktop Only)</h1>
+              <img class="rounded-md mx-auto h-96 lg:h-60 shadow-2xl transition-all hover:scale-110" src="./img/radsocial.PNG" alt="">
+            </a>
+          </div>
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-56 blur-md  right-0 rounded-full h-60 w-60 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-4000"></div>
+            <div class=" bg-cyan-200 absolute blur-md top-28 right-3/4  rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-2000"></div> 
+            <a  href="https://immense-island-92357.herokuapp.com/">
+              <h1 class="text-gray-500 text-2xl text-center mb-12  my-14">Full-Stack Campground App</h1>
+              <img class="rounded-md h-96 mx-auto lg:h-60 shadow-2xl transition-all hover:scale-110" src="./img/radcamp.PNG" alt="">
+            </a>
+            
+          </div>
         </div> 
     </div>
   </div>
-  <div>
-    <div class="container">
+  <div class="lg:w-1/2 lg:py-20 lg:mx-auto px-10">
+    <div id="form" class="container m-auto py-20">
       <div id="top" class="px-4">
-        <h1 class="text-indigo-500 font-bold py-2 text-center text-lg">CONTACT</h1>
+        <h1 class="text-indigo-500 text-2xl font-medium text-center lg:text-5xl pb-6">Contact</h1>
         <h1 class="text-black-500 font-light text-3xl pb-1 text-center">Want to reach out?</h1>
         <p class="text-gray-400 pt-3 text-center text-xl">Let's discuss it!
         </p>
       </div>
-      <form id="contact-form" action="/" method="POST" class="px-8 items-center py-4">
-        <input placeholder="Name" type="text" id="fullname" class="w-full p-2 my-2 ring-1 ring-indigo-200 rounded-md">
-        <input placeholder="Email" type="email" id="email" class="w-full p-2 my-2 ring-1 ring-indigo-200 rounded-md">
-        <textarea placeholder="Message..." cols="30" id="message" rows="10" class="w-full p-2 my-2 ring-1 ring-indigo-200 rounded-md"></textarea>
-        <button type="submit" class="bg-indigo-500 text-md font-bold h-10 p-1 w-full my-2 rounded-md block text-white">Send Email</button>
+      <form id="contact" action="/" method="POST" class="mx-auto py-4">
+        <input placeholder="Name" type="text" id="fullname" class="w-full p-2 my-2 ring-1 ring-indigo-200 rounded-md" required>
+        <input placeholder="Email" type="email" id="email" class="w-full p-2 my-2 ring-1 ring-indigo-200 rounded-md" required>
+        <textarea placeholder="Message..." cols="30" id="message" rows="10" class="w-full p-2 my-2 ring-1 ring-indigo-200 rounded-md" required></textarea>
+        <button type="submit" class="bg-indigo-500 hover:bg-indigo-400  transition-colors duration-200 text-md font-bold h-10 p-1 w-full my-2 rounded-md block text-white">Send Email</button>
+
       </form>
     </div>
   </div>
-  <div id="footer" class="w-full bg-gray-800 h-20 flex p-2 justify-between">
-    <div id="left" class="flex items-center gap-4 ml-4">
+  <div id="footer" class="w-screen bg-gray-800 h-20 flex px-4 flex-row justify-between">
+    <div id="left" class="flex my-auto gap-4 ml-4">
       <img class="h-8 w-8 rounded-full" src="./img/face.jpg" alt="">
-      <p class="text-white text-md font-medium">Radwan Portfolio</p>
+      <p class="text-white font-medium pl-2 py-2">Portfolio</p>
     </div>
-    <div id="right" class="flex gap-4 items-center mr-4">
+    <div id="right" class="flex my-auto gap-4 mr-4">
       <img src="./img/linkedin.png" class="h-8 w-8" alt="">
       <img src="./img/github.png" class="h-8 w-8" alt="">
     </div>
