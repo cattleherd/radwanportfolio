@@ -119,11 +119,19 @@ var AutoTyping = (function (e) {
   ]).default;
   
   
-  const input = ['Developer', 'Designer', 'Full-Stack'];
+  const input = ['(N Beer)'];
   const changingtext = new AutoTyping('#animatedtext', input, { //selects id with #animatedtext
       typeSpeed: 100,
       deleteSpeed: 100,
       waitBeforeDelete: 2000,
       waitBetweenWords: 500,
   });
+
+  const changingtext2 = new AutoTyping('#animatedtext2', input, { //selects id with #animatedtext
+    typeSpeed: 100,
+    deleteSpeed: 100,
+    waitBeforeDelete: 2000,
+    waitBetweenWords: 500,
+});
   changingtext.start()
+  changingtext2.start()

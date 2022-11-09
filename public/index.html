@@ -41,9 +41,8 @@
 </div>
   <!-----------------------------nav------------------------------------------------------>
   <nav id="nav" class="z-10 w-screen bg-white fixed top-0 flex  justify-between p-3 px-10">
-      <a class="flex gap-3 mr-5" href="#top">
-        <img class="h-8 rounded-full" src="" alt="">
-        <span class="text-indigo-500  animate-pulse">Portfolio</span>
+      <a class="w-[200px]" href="#top">
+        <span class="text-indigo-500 ">Mike Productions </span>
       </a>
     <div id="mainmenu" class="hidden w-full sm:flex sm:justify-end md:flex md:justify-center ">
       <ul class=" text-indigo-500 align-middle w-9/12 justify-between flex lg:justify-around lg:w-7/12" >
@@ -73,17 +72,18 @@
 </nav>
   <!--------------------------------------top half------------------------------------------>
 <div class="  h-[60vh] w-screen bg-gradient-to-t from-indigo-200 to-slate-50 relative overflow-hidden md:h-[80vh] lg:h-screen">
-      <div class=" circle rounded-full bg-gradient-to-t from-blue-500 to-cyan-200 block absolute top-40 md:top-52 left-0 h-96 w-96 md:w-[500px] md:h-[500px]  lg:h-[700px] lg:w-[700px] lg:top-72"></div>
-      <img class=" h-96 w-80  absolute mt-4 left-0 top-1/4 md:top-[100px]  md:w-[384px] md:h-[450px] lg:h-[600px] lg:w-[500px] lg:top-[150px] lg:left-0" src="./img/man.png" alt="">
+      <div class=" circle rounded-full bg-gradient-to-t from-blue-500 to-cyan-200 block absolute top-40 md:top-52 right-[10%] h-96 w-[370px] md:w-[500px] md:h-[500px]  lg:h-[700px] lg:w-[700px] lg:top-72"></div>
+      <img class=" h-[400px] w-80  absolute mt-6 right-[20%] md:top-[100px]  md:w-[384px] md:h-[450px] lg:h-[600px] lg:w-[500px] lg:top-[150px] lg:left-0" src="./img/benny_n_beer.png" alt="">
     <!----------------------------animatedtext----------------------------------------->
-    <div class="animatedtext absolute top-16  left-0 ">
-      <span class="text-indigo-600 text-4xl font-bold md:text-5xl lg:text-7xl lg:pl-0  ">Junior</span>
-      <p id="animatedtext" class="text-2xl text-cyan-500 md:text-3xl font-bold  pt-2 lg:text-5xl"></p>
+    <div class="animatedtext absolute top-16  left-[5%] ">
+      <span class="text-indigo-600 text-5xl font-bold mt-10 md:text-5xl">Benny</span>
+      <span id="animatedtext" class="text-3xl text-cyan-500 font-bold pl-[40px] xs:hidden"></span>
+      <p id="animatedtext2" class="text-cyan-500 font-bold pl-[40px] hidden xs:block xs:pt-8 xs:text-3xl"></p>
     </div>
     <!----------------------------short summary---------------------------------------->
     <div class="bg-white  absolute hidden md:block left-[45vw] top-1/4 h-[250px] w-[400px] rounded-xl px-4  py-6">
-      <h1 class="text-3xl text-indigo-500 font-bold ">Hello I'm Radwan.</h1>
-      <p class="text-gray-500 text-lg mt-5">I am a junior web developer with experience building fullstack web applications. Please take a look at my recent works! 
+      <h1 class="text-3xl text-indigo-500 font-bold ">Hello I'm Mike</h1>
+      <p class="text-gray-500 text-lg mt-5">This is where you will put your bio.  
       </p>
       <a class="bg-indigo-500 text-md hover:bg-indigo-400 hover:font-bold hover:scale-110 duration-200 hover:cursor-pointer   w-32 h-10 mt-6 rounded-xl text-white block py-2 text-center" href="#contact">Hire Me</a>
     </div>
@@ -91,29 +91,19 @@
   <!---------------------------end of top half---------------------------------------------->
   <div id="about-me" class="">
     <div class="flex flex-col-reverse pt-12 lg:flex-row justify-end "> <!--m-auto to center align items in flex col-->
-      <div id="left" class=" max-h-[375px]  max-w-[300px] p-10 overflow-hidden m-auto lg:pr-10 bg-gradient-to-t from-indigo-200 to-slate-50 rounded-full">
-        <img src="./img/face.png" class="p-4" alt="">
+      <div id="left" class=" max-h-[375px]  max-w-[400px] p-10 mt-20 overflow-hidden m-auto lg:pr-10 bg-gradient-to-t from-indigo-200 to-slate-50 rounded-full">
+        <img src="./img/man1.png" class="w-[350px] h-[250px]" alt="">
       </div>
       <div id="right" class="py-10 lg:w-1/2 lg:pl-10 px-10">
         <h1 class="text-indigo-500 text-xl font-bold lg:text-4xl py-2">ABOUT ME</h1>
-        <h1 class="text-gray-500 font-light text-3xl pb-1">Modern Designs</h1>
-        <h1 class="text-gray-500 font-light text-3xl">Seemless U/X</h1>
-        <p class="text-gray-500 pt-3 text-xl lg:text-2xl">I am passionate about web development, and have built full stack web applications using using React, ExpressJs, and MongoDB, and NodeJs. I can also create modern, and responsive websites with tailwind CSS, and I have experience in designing
-          graphics using figma aswell.
+        <h1 class="text-gray-500 font-light text-3xl pb-1">Insert a title</h1>
+        <p class="text-gray-500 pt-3 text-xl lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, pariatur? Veritatis nam eum ratione porro ullam, eos id blanditiis, totam aperiam quia quasi ducimus asperiores quisquam doloribus veniam quaerat ex?
         </p>
       </div>
     </div>
   </div>
   <div id="works">
     <div class="container flex flex-col py-20  m-auto px-4">
-      <div id="top" class="lg:w-9/12 px-10 mx-auto lg:pb-20">
-        <h1 class="text-indigo-500 text-2xl font-medium text-center lg:text-5xl lg:pb-10">Services</h1>
-        <h1 class="text-gray-500 font-light text-3xl text-center pb-6">What I Can Offer</h1>
-        <p class="text-gray-500 pt-3 text-xl lg:text-2xl">I can create websites and web apps for a wide scale of needs; from a simple and elegant
-          landing page, to a scaleable web application, like a social media platform. I'm experienced in designing specific apis to manipulate, or fetch data from the server. I am also familiar with Wordpress CMS to
-          create websites quickly that are secure, responsive, and SEO friendly. I also have experience creating custom vector graphics, and website design prototypes using figma.
-        </p>
-      </div>
       <div id="" class="pt-12"></div>
         <h1 class="text-indigo-500 text-2xl font-medium text-center lg:text-5xl pb-6">Portfolio</h1>
         <h1 class="text-gray-500 font-light text-3xl pb-1 text-center mb-12">Works & Projects</h1>
@@ -121,29 +111,58 @@
           <div class="w-full mb-8 lg:w-6/12 relative">
             <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
             <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
-            <a href="https://react-pokedex-2.herokuapp.com/">
-              <h1 class="text-gray-500 text-2xl text-center mb-12">ReactJs Pokedex</h1>
-              <img class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110" src="./img/pokemon.PNG" alt="">
-            </a>
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 1</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668023915/benny%20n%20beer/ep1_h2vqrl.mp4" type="video/mp4">
+              </video>
           </div>
           <div class="w-full mb-8 lg:w-6/12 relative">
-            <div class="bg-purple-200 absolute top-3/4 blur-md right-0 rounded-full h-60 w-60 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-4000"></div>
-            <div class=" bg-cyan-200 absolute top-20 right-3/4 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-2000"></div> 
-            <a  href="https://rad-social.herokuapp.com/">
-              <h1 class="text-gray-500 text-2xl text-center mb-12">ReactJs Social Media</h1>
-              <img class="rounded-md mx-auto h-96 lg:h-60 shadow-2xl transition-all hover:scale-110" src="./img/radsocial.PNG" alt="">
-            </a>
-            <br>
-            <p style="text-align: center">test account: username=cattleherd password=password</p>
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 2</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668024030/benny%20n%20beer/ep2_n6w9bp.mp4" type="video/mp4">
+              </video>
           </div>
           <div class="w-full mb-8 lg:w-6/12 relative">
-            <div class="bg-purple-200 absolute top-56 blur-md  right-0 rounded-full h-60 w-60 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-4000"></div>
-            <div class=" bg-cyan-200 absolute blur-md top-28 right-3/4  rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-2000"></div> 
-            <a  href="https://immense-island-92357.herokuapp.com/">
-              <h1 class="text-gray-500 text-2xl text-center mb-12  my-14">Full-Stack Campground App</h1>
-              <img class="rounded-md h-96 mx-auto lg:h-60 shadow-2xl transition-all hover:scale-110" src="./img/radcamp.PNG" alt="">
-            </a>
-            
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 3</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668023915/benny%20n%20beer/ep1_h2vqrl.mp4" type="video/mp4">
+              </video>
+          </div>
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 4</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668023915/benny%20n%20beer/ep1_h2vqrl.mp4" type="video/mp4">
+              </video>
+          </div>
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 5</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668023915/benny%20n%20beer/ep1_h2vqrl.mp4" type="video/mp4">
+              </video>
+          </div>
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 6</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668023915/benny%20n%20beer/ep1_h2vqrl.mp4" type="video/mp4">
+              </video>
+          </div>
+          <div class="w-full mb-8 lg:w-6/12 relative">
+            <div class="bg-purple-200 absolute top-0 blur-md right-0 rounded-full h-40 w-40 mix-blend-multiply filter animate-blob  opacity-50 animation-delay-2000"></div>
+            <div class=" bg-cyan-200 absolute top-3/4 right-44 blur-md rounded-full h-40 w-40 mix-blend-multiply filter  opacity-50 animate-blob animation-delay-4000"></div> 
+              <h1 class="text-gray-500 text-2xl text-center mb-12">Episode 7</h1>
+              <video controls class="rounded-md h-96 lg:h-60 shadow-2xl mx-auto transition-all hover:scale-110">
+                <source src="https://res.cloudinary.com/cattleherd/video/upload/v1668023915/benny%20n%20beer/ep1_h2vqrl.mp4" type="video/mp4">
+              </video>
           </div>
         </div> 
     </div>
@@ -168,13 +187,13 @@
   <div id="footer" class="w-screen bg-gray-800 h-20 flex px-4 flex-row justify-between">
     <div id="left" class="flex my-auto gap-4 ml-4">
       
-      <p class="text-white font-medium pl-2 py-2">Radwan Portfolio</p>
+      <p class="text-white font-medium pl-2 py-2">Mike Productions</p>
     </div>
     <div id="right" class="flex my-auto gap-4 mr-4">
-      <a href="https://www.linkedin.com/in/radwan-ahmed-2267b8224/">
+      <a href="https://www.linkedin.com/in/radwasn-ahmed-2267b8224/">
         <img src="./img/linkedin.png" class="h-8 w-8" alt="">
       </a>
-      <a href="https://github.com/cattleherd">
+      <a href="https://github.com/casttleherd">
         <img src="./img/github.png" class="h-8 w-8" alt="">
       </a>
     </div>

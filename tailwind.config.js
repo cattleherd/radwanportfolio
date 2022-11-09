@@ -6,6 +6,10 @@ module.exports = {
       animation: {
       blob: "blob 7s infinite",
     },
+    screens: {
+      'xxs': "400px",
+      'xs': "530px",
+    },
     keyframes: {
       blob: {
         "0%": {
